@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  background-image: url(https://lexus-cms-media.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/05/2021-Lexus-IS-F-SPORT-001-1500x900.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.container .wrapper{
+        perspective: 500px;
+        perspective-origin: center;
+}
+.container .wrapper .cube{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 5s;
+}
+  .cube .back {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      transform: translateZ(-200px);
+      background-image: url(https://lexus-cms-media.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/05/2021-Lexus-IS-F-SPORT-001-1500x900.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .cube .front {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      transform: rotateX(0);
+      transform-origin: bottom;
+      background-image: url(https://lexus-cms-media.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/05/2021-Lexus-IS-F-SPORT-001-1500x900.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  .cube .bottom {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+    background-image: url(https://lexus-cms-media.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/05/2021-Lexus-IS-F-SPORT-001-1500x900.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .cube .top {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateX(270deg) ;
+    transform-origin: top;
+    background-image: url(https://lexus-cms-media.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/05/2021-Lexus-IS-F-SPORT-001-1500x900.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .cube .right {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    transform: translateZ(-203px) rotateY(90deg);
+    transform-origin: right;
+    background-image: url(https://lexus-cms-media.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/05/2021-Lexus-IS-F-SPORT-001-1500x900.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .cube .left{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    transform:translateZ(0px) rotateY(90deg) ;
+    background-image: url(https://lexus-cms-media.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/05/2021-Lexus-IS-F-SPORT-001-1500x900.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform-origin: left;
+  }
+
+  .cube:hover{
+    transform: rotateX(360deg) rotateY(180deg) rotateZ(360deg);
+}
